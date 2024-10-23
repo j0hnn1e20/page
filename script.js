@@ -22,13 +22,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // Função para carregar o post
     function loadPost(postFile) {
         fetch(`posts/${postFile}`)
-            .then(response => response.text())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Erro ao carregar o post: ${response.statusText}`);
+                }
+                return response.text();
+            })
             .then(text => {
                 const htmlContent = marked(text);
                 postContent.innerHTML = htmlContent;
             })
             .catch(err => {
-                postContent.innerHTML = '<p>Erro ao carregar o post.</p>';
+                postContent.innerHTML = `<p>${err.message}</p>`;
             });
     }
 });
