@@ -3,8 +3,8 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f0f0f5;
-  color: #333;
+  background-color: #2d353b;
+  color: #cccccc;
   line-height: 1.6;
   display: flex;
   height: 100vh;
@@ -20,7 +20,7 @@ body {
 
 /* Menu lateral */
 #sidebar {
-  background-color: #f0f0f5;
+  background-color: #2d353b;
   color: white;
   padding: 20px;
   width: 200px;
@@ -53,14 +53,14 @@ body {
   margin-left: 220px;
   padding: 20px;
   width: 100%;
-  background-color: #f0f0f5;
+  background-color: #2d353b;
 }
 
 /* Estilo do cabeçalho principal */
 h1 {
   text-align: center;
   font-size: 2.5em;
-  color: #333;
+  color: #eeeeee;
   margin-bottom: 20px;
 }
 
@@ -74,11 +74,11 @@ h1 {
 
 /* Estilo dos posts individuais */
 .post {
-  background-color: #fff;
+  background-color: #252525;
   border-radius: 10px;
   margin-bottom: 20px;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
