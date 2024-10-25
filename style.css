@@ -52,7 +52,10 @@ body {
 #main-content {
   margin-left: 220px;
   padding: 20px;
-  width: 100%;
+  width: calc(100% - 220px); /* Ajusta largura para acomodar a barra lateral */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #2d353b;
 }
 
@@ -106,3 +109,4 @@ h1 {
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.3s ease, transform 0.3
+}
