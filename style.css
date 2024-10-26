@@ -1,70 +1,70 @@
+/* Reset de margens e paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Estilo geral do corpo */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #2d353b;
-  color: #cccccc;
-  line-height: 1.6;
+  background-color: #2c2f33;
+  color: #ffffff;
   display: flex;
+}
+
+/* Menu lateral fixo à esquerda */
+.sidebar {
+  width: 250px;
   height: 100vh;
-}
-
-/* Container geral que agrupa o menu lateral e o conteúdo */
-#container {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 100%;
-}
-
-/* Menu lateral */
-#sidebar {
-  background-color: #2d353b;
-  color: white;
+  background-color: #23272a;
   padding: 20px;
-  width: 200px;
-  min-height: 100vh;
   position: fixed;
+  top: 0;
+  left: 0;
 }
 
-#sidebar nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-#sidebar nav ul li {
+.sidebar h2 {
+  color: #ffffff;
+  font-size: 1.5em;
   margin-bottom: 15px;
 }
 
-#sidebar nav ul li a {
-  color: rgb(0, 0, 0);
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  color: #ffffff;
   text-decoration: none;
-  font-size: 1.2em;
-  transition: color 0.3s ease;
+  font-size: 1em;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
-#sidebar nav ul li a:hover {
-  color: #007bff;
+.sidebar ul li a:hover {
+  background-color: #7289da;
 }
 
-/* Conteúdo principal */
-#main-content {
-  margin-left: 220px;
+/* Estilo do container de conteúdo */
+.content-container {
+  margin-left: 270px; /* Espaço para o menu lateral */
   padding: 20px;
-  width: calc(100% - 220px); /* Ajusta largura para acomodar a barra lateral */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #2d353b;
+  width: calc(100% - 270px);
+  text-align: center; /* Centraliza o título e o conteúdo */
 }
 
-/* Estilo do cabeçalho principal */
 h1 {
-  width: 100%;
   text-align: center;
   font-size: 2.5em;
-  color: #eeeeee;
+  color: #ffffff;
   margin-bottom: 20px;
 }
 
@@ -74,22 +74,23 @@ h1 {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  text-align: left;
 }
 
 /* Estilo dos posts individuais */
 .post {
-  background-color: #252525;
+  background-color: #36393f;
   border-radius: 10px;
   margin-bottom: 20px;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Efeito hover nos posts */
 .post:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Container de paginação */
@@ -101,7 +102,7 @@ h1 {
 
 /* Estilo dos botões de paginação */
 #pagination button {
-  background-color: #007bff;
+  background-color: #7289da;
   color: white;
   border: none;
   padding: 10px 15px;
@@ -109,5 +110,57 @@ h1 {
   border-radius: 50px;
   cursor: pointer;
   font-size: 1rem;
-  transition: background-color 0.3s ease, transform 0.3
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efeito hover nos botões */
+#pagination button:hover {
+  background-color: #5b6eae;
+  transform: scale(1.05);
+}
+
+/* Estilo do botão desativado */
+#pagination button.disabled {
+  background-color: #444;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .content-container {
+    margin-left: 210px;
+    width: calc(100% - 210px);
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .post {
+    padding: 15px;
+  }
+
+  #pagination button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .content-container {
+    margin-left: 0;
+    width: 100%;
+    padding: 10px;
+  }
 }
