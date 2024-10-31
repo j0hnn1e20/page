@@ -1,166 +1,55 @@
-/* Reset de margens e paddings */
-* {
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-/* Estilo geral do corpo */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #2c2f33;
-  color: #ffffff;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f5f5;
 }
 
-/* Menu lateral fixo à esquerda */
-.sidebar {
-  width: 250px;
-  height: 100vh;
-  background-color: #23272a;
-  padding: 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-.sidebar h2 {
-  color: #ffffff;
-  font-size: 1.5em;
-  margin-bottom: 15px;
-}
-
-.sidebar ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.sidebar ul li {
-  margin-bottom: 10px;
-}
-
-.sidebar ul li a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 1em;
-  display: block;
-  padding: 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.sidebar ul li a:hover {
-  background-color: #7289da;
-}
-
-/* Estilo do container de conteúdo */
-.content-container {
-  margin-left: 270px; /* Espaço para o menu lateral */
-  padding: 20px;
-  width: calc(100% - 270px);
-  text-align: center; /* Centraliza o título e o conteúdo */
-}
-
-h1 {
+header {
+  width: 100%;
+  background-color: #333;
+  color: #fff;
   text-align: center;
-  font-size: 2.5em;
-  color: #ffffff;
-  margin-bottom: 20px;
+  padding: 1em 0;
 }
 
-/* Container dos posts */
-#posts-container {
-  margin-top: 20px;
+main {
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-}
-
-/* Estilo dos posts individuais */
-.post {
-  background-color: #36393f;
-  border-radius: 10px;
-  margin-bottom: 20px;
+  width: 100%;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efeito hover nos posts */
-.post:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+#posts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-/* Container de paginação */
+.post {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
 #pagination {
-  text-align: center;
   margin-top: 20px;
-  padding: 10px 0;
+  text-align: center;
 }
 
-/* Estilo dos botões de paginação */
 #pagination button {
-  background-color: #7289da;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  margin: 5px;
-  border-radius: 50px;
+  margin: 0 5px;
+  padding: 5px 10px;
   cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
 }
 
-/* Efeito hover nos botões */
-#pagination button:hover {
-  background-color: #5b6eae;
-  transform: scale(1.05);
-}
-
-/* Estilo do botão desativado */
-#pagination button.disabled {
-  background-color: #444;
-  cursor: not-allowed;
-  opacity: 0.6;
-}
-
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-  .sidebar {
-    width: 200px;
-  }
-
-  .content-container {
-    margin-left: 210px;
-    width: calc(100% - 210px);
-  }
-
-  h1 {
-    font-size: 2em;
-  }
-
-  .post {
-    padding: 15px;
-  }
-
-  #pagination button {
-    padding: 8px 12px;
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-
-  .content-container {
-    margin-left: 0;
-    width: 100%;
-    padding: 10px;
-  }
+#pagination button.active {
+  background-color: #555;
 }
