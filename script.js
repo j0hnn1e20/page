@@ -1,59 +1,48 @@
-// Caminho dos arquivos de markdown
-const posts = [
-  'posts/post1.md',
-  'posts/post2.md',
-  'posts/post3.md',
-  'posts/post4.md',
-  'posts/post5.md',
-  'posts/post6.md'
-];
-
 const postsPerPage = 5;
 let currentPage = 1;
+let posts = [];
 
-function loadPosts(page) {
-  const postsContainer = document.getElementById('posts-container');
-  postsContainer.innerHTML = ''; // Limpa posts anteriores
-
-  const start = (page - 1) * postsPerPage;
-  const end = start + postsPerPage;
-
-  // Carrega os posts na ordem definida no array
-  const postsToLoad = posts.slice(start, end);
-
-  postsToLoad.forEach(post => {
-      fetch(post)
-          .then(response => response.text())
-          .then(data => {
-              const postElement = document.createElement('div');
-              postElement.classList.add('post');
-              postElement.innerHTML = marked.parse(data); // Converte markdown para HTML
-              postsContainer.appendChild(postElement);
-          });
-  });
-
-  updatePagination();
+async function loadPosts() {
+  const response = await fetch("posts/posts.json");
+  posts = await response.json();
+  renderPosts();
+  renderPagination();
 }
 
-function updatePagination() {
-  const pagination = document.getElementById('pagination');
-  pagination.innerHTML = ''; // Limpa paginação anterior
+function renderPosts() {
+  const start = (currentPage - 1) * postsPerPage;
+  const end = start + postsPerPage;
+  const postsContainer = document.getElementById("posts-container");
+  postsContainer.innerHTML = "";
 
-  const totalPages = Math.ceil(posts.length / postsPerPage);
+  posts.slice(start, end).forEach(async (post) => {
+    const postElement = document.createElement("div");
+    postElement.className = "post";
 
-  for (let i = 1; i <= totalPages; i++) {
-      const button = document.createElement('button');
-      button.textContent = i;
-      if (i === currentPage) {
-          button.classList.add('disabled');
-      }
-      button.addEventListener('click', () => {
-          currentPage = i;
-          loadPosts(currentPage);
-      });
-      pagination.appendChild(button);
+    const postContent = await fetch(`posts/${post}`);
+    const markdown = await postContent.text();
+    postElement.innerHTML = marked(markdown);
+
+    postsContainer.appendChild(postElement);
+  });
+}
+
+function renderPagination() {
+  const pageCount = Math.ceil(posts.length / postsPerPage);
+  const paginationContainer = document.getElementById("pagination");
+  paginationContainer.innerHTML = "";
+
+  for (let i = 1; i <= pageCount; i++) {
+    const button = document.createElement("button");
+    button.innerText = i;
+    button.className = i === currentPage ? "active" : "";
+    button.addEventListener("click", () => {
+      currentPage = i;
+      renderPosts();
+      renderPagination();
+    });
+    paginationContainer.appendChild(button);
   }
 }
 
-// Inicializa carregando a primeira página
-loadPosts(currentPage);
+document.addEventListener("DOMContentLoaded", loadPosts);
