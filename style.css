@@ -1,55 +1,122 @@
+/* Estilos gerais */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: #36393f;
+  color: #dcddde;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f5f5f5;
 }
 
+/* Cabeçalho */
 header {
   width: 100%;
-  background-color: #333;
+  background-color: #202225;
   color: #fff;
   text-align: center;
   padding: 1em 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+/* Container principal */
 main {
   max-width: 800px;
   width: 100%;
   padding: 20px;
+  box-sizing: border-box;
 }
 
+/* Container de posts */
 #posts-container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 
+/* Estilo dos posts */
 .post {
-  background-color: #fff;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  background-color: #2f3136;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #202225;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s;
 }
 
+.post:hover {
+  background-color: #393c43;
+}
+
+/* Links dentro dos posts */
+.post a {
+  color: #7289da;
+  text-decoration: none;
+}
+
+.post a:hover {
+  text-decoration: underline;
+}
+
+/* Cabeçalho do post */
+.post h1,
+.post h2,
+.post h3 {
+  color: #fff;
+  margin-top: 0;
+}
+
+/* Paginação */
 #pagination {
+  display: flex;
+  justify-content: center;
   margin-top: 20px;
-  text-align: center;
 }
 
 #pagination button {
   margin: 0 5px;
-  padding: 5px 10px;
+  padding: 8px 12px;
   cursor: pointer;
-  background-color: #333;
+  background-color: #4f545c;
   color: #fff;
   border: none;
-  border-radius: 3px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+#pagination button:hover {
+  background-color: #5865f2;
 }
 
 #pagination button.active {
-  background-color: #555;
+  background-color: #5865f2;
+}
+
+/* Personalização do markdown */
+.post p {
+  line-height: 1.5;
+  color: #b9bbbe;
+}
+
+.post code {
+  background-color: #202225;
+  color: #7289da;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: "Courier New", monospace;
+}
+
+.post pre {
+  background-color: #2e3338;
+  color: #ffffff;
+  padding: 12px;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.post blockquote {
+  border-left: 4px solid #7289da;
+  padding-left: 12px;
+  color: #b9bbbe;
 }
