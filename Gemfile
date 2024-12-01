@@ -14,4 +14,4 @@ gem "base64", "~> 0.1"                # (opcional) Para manipulação de base64
 gem "bigdecimal", "~> 3.0"            # (opcional) Para cálculos numéricos
 gem "kramdown-parser-gfm"
 gem 'webrick', '~> 1.7'
-
+gem 'github-pages', group: :jekyll_plugins
