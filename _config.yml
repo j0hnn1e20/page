@@ -3,9 +3,9 @@ baseurl: "/page"
 url: "https://j0hnn1e20.github.io"
 
 # THEME-SPECIFIC CONFIGURATION
-title: Type on Strap                                    # site's title
-description: "A website with blog posts and pages"      # used by search engines
-avatar: assets/img/triangle.png                         # Empty for no avatar in navbar
+title: J0hnn1e20                                    # site's title
+description: "Page"      # used by search engines
+avatar: assets/img/pic.png                         # Empty for no avatar in navbar
 favicon: assets/favicon.ico                             # Icon displayed in the tab
 
 # Header and footer text
