@@ -2,7 +2,7 @@
 - example:
   title: Example
   url: https://example.com
-  hide: true
+  hide: false
   position: 2
 - type-on-strap:
   title: "Type on Strap"
