@@ -14,8 +14,8 @@ Nos presentes termos:
   1.1. Todas as obras de minha autoria devem exibir o pseudônimo “J0hnn1e20” como indicação da autoria.
 
 # 2. Direitos do Usuário
-  2.1. Ao adquirir uma Obra Comercial de minha autoria, o usuário tem o direito de modificar, adaptar ou converter o conteúdo para uso pessoal ou em projetos.
-  2.2. Obras de Livre Uso concedem os mesmos direitos previstos para as Obras Comerciais, com os seguintes adicionais: Permissão para redistribuição livre, incluindo modificações, adaptações e conversões. Uso para fins lucrativos, desde que a obra apresente alterações em relação ao original e que seja claramente indicado que a obra original é de livre uso e pode ser obtida sem custos.
+  - 2.1. Ao adquirir uma Obra Comercial de minha autoria, o usuário tem o direito de modificar, adaptar ou converter o conteúdo para uso pessoal ou em projetos.
+  - 2.2. Obras de Livre Uso concedem os mesmos direitos previstos para as Obras Comerciais, com os seguintes adicionais: Permissão para redistribuição livre, incluindo modificações, adaptações e conversões. Uso para fins lucrativos, desde que a obra apresente alterações em relação ao original e que seja claramente indicado que a obra original é de livre uso e pode ser obtida sem custos.
 
 # 3. Restrições de Direitos
   3.1. O usuário não possui o direito de reivindicar a titularidade ou autoria da obra.
