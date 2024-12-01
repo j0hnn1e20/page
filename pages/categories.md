@@ -1,6 +1,6 @@
 ---
 layout: categories
-title: Categories
+title: Categorias
 permalink: /categories/
 hide: false
 excluded: true
