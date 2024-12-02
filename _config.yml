@@ -4,15 +4,15 @@ url: "https://j0hnn1e20.github.io"
 
 # THEME-SPECIFIC CONFIGURATION
 title: J0hnn1e20                                    # site's title
-description: "Page"      # used by search engines
-avatar: assets/img/pic.png                         # Empty for no avatar in navbar
-favicon: assets/favicon.ico                             # Icon displayed in the tab
+description: "Showroom"                             # used by search engines
+avatar: assets/img/pic.png                          # Empty for no avatar in navbar
+favicon: assets/favicon.ico                         # Icon displayed in the tab
 
 # Header and footer text
-header_text: J0hnn1e20's Blog  # Change Blog header text
-#header_feature_image: assets/img/header/triangular.jpeg
-#header_feature_image_responsive: true
-footer_text: J0hnn1e20's Blog
+header_text: J0hnn1e20's Showroom  # Change Blog header text
+header_feature_image: assets/img/header/desier.png
+header_feature_image_responsive: true
+footer_text: 2024 | J0hnn1e20's Showroom
 
 # Blog
 excerpt: true                                           # Or "truncate" (first 250 characters), "false" to disable
