@@ -13,6 +13,10 @@ layout: default
         </div>
     </header>
 
+    <!-- Tag list -->
+    {% capture tag_list %}{{ page.tags | join: "|" }}{% endcapture %}
+    {% include default/tags_list.liquid tags=tag_list %}
+
     <section class="post-content">
     {% if page.bootstrap %}<div class="bootstrap-iso">{% endif %}
             {{ content }}
