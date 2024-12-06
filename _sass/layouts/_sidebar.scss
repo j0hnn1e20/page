@@ -1,44 +1,35 @@
-// Variáveis principais
-$sidebar-bg-color: #f4f4f4;
-$sidebar-width: 250px;
-$sidebar-text-color: #333;
-$sidebar-link-hover-color: #007bff;
-$sidebar-border-color: #ddd;
-
-// Estilos da barra lateral
+// Estilos para o menu lateral
 .sidebar {
-  background-color: $sidebar-bg-color;
-  width: $sidebar-width;
-  min-height: 100vh; // Preenche a altura total da janela
-  padding: 20px;
-  border-right: 1px solid $sidebar-border-color;
-  position: fixed;
-  left: 0;
-  top: 0;
-
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    li {
-      margin-bottom: 15px;
-
-      a {
-        text-decoration: none;
-        color: $sidebar-text-color;
-        font-size: 1rem;
-
-        &:hover {
-          color: $sidebar-link-hover-color;
+    position: absolute; // Posiciona em relação ao layout principal
+    top: 100px; // Ajusta para começar abaixo do cabeçalho
+    left: 0;
+    width: 250px; // Define a largura do menu
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+  
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+  
+      li {
+        margin-bottom: 10px;
+  
+        a {
+          text-decoration: none;
+          color: #333;
+  
+          &:hover {
+            color: #007bff;
+          }
         }
       }
     }
   }
-}
-
-// Ajusta o conteúdo principal para evitar sobreposição
-.main-content {
-  margin-left: $sidebar-width;
-  padding: 20px;
-}
+  
+  // Ajusta o conteúdo principal para evitar sobreposição
+  .main-content {
+    margin-left: 250px; // Empurra o conteúdo para o lado direito
+  }
+  
