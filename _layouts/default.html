@@ -11,12 +11,9 @@
     {% capture _navbar %}{% include default/navbar.liquid %}{% endcapture %}
     {{ _navbar | split: " " | join: " " }}
       <!-- Main Content Section -->
-      <div class="main-content">
         <div class="content">
           {{ content }}
         </div>
-      </div>
-    </div>
     
     {% capture _footer %}{% include default/footer.liquid %}{% endcapture %}
     {{ _footer | split: " " | join: " " }}
