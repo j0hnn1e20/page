@@ -10,13 +10,6 @@
   <body>
     {% capture _navbar %}{% include default/navbar.liquid %}{% endcapture %}
     {{ _navbar | split: " " | join: " " }}
-    
-    <div class="layout">
-      <!-- Sidebar Section -->
-      <aside class="sidebar">
-        {% include default/sidebar.liquid %}
-      </aside>
-
       <!-- Main Content Section -->
       <div class="main-content">
         <div class="content">
