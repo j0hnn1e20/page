@@ -1,20 +1,21 @@
-// Estilos para o menu lateral
+// Menu lateral
 .sidebar {
-    position: absolute; // Posiciona em relação ao layout principal
-    top: 100px; // Ajusta para começar abaixo do cabeçalho
+    position: absolute;
+    top: 70px; // Começa logo abaixo do cabeçalho
     left: 0;
-    width: 250px; // Define a largura do menu
+    width: 250px;
+    height: calc(100vh - 70px); // Preenche a altura da janela, menos o cabeçalho
     background-color: #f8f9fa;
     padding: 20px;
     border-right: 1px solid #ddd;
   
     ul {
       list-style: none;
-      margin: 0;
       padding: 0;
+      margin: 0;
   
       li {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
   
         a {
           text-decoration: none;
@@ -28,8 +29,9 @@
     }
   }
   
-  // Ajusta o conteúdo principal para evitar sobreposição
+  // Conteúdo principal
   .main-content {
-    margin-left: 250px; // Empurra o conteúdo para o lado direito
+    margin-left: 250px; // Empurra o conteúdo ao lado do menu
+    padding: 20px;
   }
   

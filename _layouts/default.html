@@ -6,16 +6,26 @@
 -->
 <html lang="en">
   {% capture _head %}{% include default/head.liquid %}{% endcapture %}
-  {{ _head | split: " " | join: " "}}
+  {{ _head | split: " " | join: " " }}
   <body>
     {% capture _navbar %}{% include default/navbar.liquid %}{% endcapture %}
-    {{ _navbar | split: " " | join: " "}}
-    <div class="layout"><!-- Include sidebar (by: J0hnn1e20) -->
-      {% include default/sidebar.liquid %}
-    <div class="content">
-      {{ content }}
+    {{ _navbar | split: " " | join: " " }}
+    
+    <div class="layout">
+      <!-- Sidebar Section -->
+      <aside class="sidebar">
+        {% include default/sidebar.liquid %}
+      </aside>
+
+      <!-- Main Content Section -->
+      <div class="main-content">
+        <div class="content">
+          {{ content }}
+        </div>
+      </div>
     </div>
+    
     {% capture _footer %}{% include default/footer.liquid %}{% endcapture %}
-    {{ _footer | split: " " | join: " "}}
+    {{ _footer | split: " " | join: " " }}
   </body>
 </html>
